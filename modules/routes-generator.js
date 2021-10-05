@@ -201,6 +201,7 @@ window.Routes = (function () {
     if (type === "ocean" || !cells.road[prev]) segment.push(end);
     if (!cells.road[prev]) cells.road[prev] = score;
     if (cells.road[prev]) cells.crossroad[prev] += score;
+    cells.road[prev] += score;
 
     for (let i = 0, limit = 1000; i < limit; i++) {
       if (!from[current]) break;
